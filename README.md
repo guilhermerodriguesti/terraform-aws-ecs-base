@@ -3,7 +3,7 @@
 
 ## Tecnologias
 
-* Terraform
+* Terraform e Waypoint
 
 ## 🚨 Pré-requisitos
 
@@ -14,7 +14,10 @@
 
 ## 🔧 Instruções de Instalação
 1. Configure AWS
-$ aws configure
+
+```
+aws configure
+```
 2.  Clonar este repositório:
 ```
 git clone https://github.com/guilhermerodriguesti/terraform-aws-ecs-base.git
@@ -44,9 +47,11 @@ waypoint init && waypoint up
 ```
 
 ## 🔧 Instruções Git
-
+```
 git init && git remote add origin https://github.com/guilhermerodriguesti/terraform-aws-ecs-base.git
-git add --all && git commit -am "feat: add git" && git push 
+git add --all && git commit -am "feat: add git" && git push
+git push --set-upstream origin master 
+```
 ## 🤝 Contribuições
 
 Contribuições, problemas e solicitações são bem-vindos.<br />
