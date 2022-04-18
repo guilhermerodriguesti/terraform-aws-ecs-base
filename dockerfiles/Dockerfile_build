@@ -1,0 +1,17 @@
+FROM node:14-alpine
+LABEL MAINTAINER="DevOps  <devops@gteam.com>"
+
+### INSTAÇÃO DE PACOTES ESSENCIAIS ###
+RUN apk update && apk add --no-cache --virtual --update \
+        bash \
+        build-base \
+        openssh-client \
+        git \
+        curl \
+        make \
+        python3 \
+        libc6-compat \
+        tzdata
+
+#REMOVE ARQUIVOS DESNECESSARIOS ###
+RUN  apk del tzdata && rm -rf  /tmp/* /var/tmp/* /var/cache/apk/*
